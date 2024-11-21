@@ -1,30 +1,40 @@
 let button = document.getElementById("btn");
-var ans = document.getElementById("res");
+let ans = document.getElementById("res");
+let input1 = document.getElementById("num");
+let input2 = document.getElementById("num2");
 button.addEventListener('click', () => {
 
-    var input1 = document.getElementById("num").value;
-    var input2 = document.getElementById("num2").value;
-    var ope = document.getElementById("operation").value;
+    let num1 = input1.value;
+    let num2 = input2.value;
+    let ope = document.getElementById("operation").value;
+    let result = 0
 
 
 
     if (ope == '+') {
-        var result = parseInt(input1) + parseInt(input2);
+        result = parseInt(num1) + parseInt(num2);
     }
     else if (ope == '-') {
-        var result = parseInt(input1) - parseInt(input2);
+        result = parseInt(num1) - parseInt(num2);
 
     }
     else if (ope == '*') {
-        var result = parseInt(input1) * parseInt(input2);
+        result = parseInt(num1) * parseInt(num2);
 
     }
     else if (ope == '/') {
-        var result = parseInt(input1) / parseInt(input2);
+        result = parseInt(num1) / parseInt(num2);
     }
     else if (ope == '%') {
-        var result = parseInt(input1) % parseInt(input2);
+        result = parseInt(num1) % parseInt(num2);
     }
 
     ans.value = result;
+})
+
+let button1 = document.getElementById("button");
+button1.addEventListener('click', () => {
+    input1.value = "";
+    input2.value = "";
+    ans.value = "";
 })
